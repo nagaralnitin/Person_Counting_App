@@ -1,38 +1,54 @@
-# Object detection app using YOLOv8 and Android
+# Person Counting App
 
-### Check the video to understand the code: https://youtu.be/dl7rCmvIyiI
+This Android app leverages a trained YOLOv8 model, converted to TFLite format, to detect and count people in images or live camera feeds. It's designed for efficient deployment on mobile devices.
 
-## Step 1 (Train and export Object detection model):
-- git clone https://github.com/AarohiSingla/Object-Detection-Android-App.git
-  
-- Train yolov8 model on custom dataset and export it in .tflite format. (Check train_export_yolov8_model.ipynb )
+## Features
 
-## Step 2 (Object detection android app setup):
-- Open android_app folder.
+- Detect and count people in static images or real-time camera feeds
+- Seamless integration of custom TFLite models and label files
+- User-friendly interface for image upload and live camera detection
 
-- Put your .tflite model and .txt label file inside the assets folder. You can find assets folder at this location: <b> android_app\android_app\app\src\main\assets</b>
+## Setup Instructions
 
-- Rename paths of your model and labels file in Constants.kt file. You can find Constants.kt at this location: <b>android_app\android_app\app\src\main\java\com\surendramaran\yolov8tflite </b>
+### Prerequisites
 
-- Download and install Android Studio from the official website (https://developer.android.com/studio)
+- Android Studio
+- A YOLOv8 model trained and converted to TFLite format (.tflite)
+- A corresponding label file (.txt)
 
-- Once installed, open Android Studio from your applications menu.
+### Steps to Setup
 
-- When Android Studio opens, you'll see a welcome screen. Here, you'll find options to create a new project, open an existing project, or check out project from version control.Since you already have a project, click on "Open an existing Android Studio project".
+1. **Clone the Repository**
+2. **Add Your Model and Labels**
+- Place your `.tflite` model and `.txt` label file in the `assets` folder:
+  `app/src/main/assets/`
 
-- Navigate to the directory where your project is located and select the project's root folder. 
+3. **Update Model and Labels Path**
+- Open `Constants.kt` file located at:
+  `app/src/main/java/com/detectionapp/yolov8tflite/Constants.kt`
+- Update the `MODEL_FILE` and `LABEL_FILE` constants with your file names
 
-- Build and Run
-![SAD1K9IGLAXS_jpg rf d634b3e06bebf7dd7d15b3e699e359d2](https://github.com/AarohiSingla/Object-Detection-Android-App/assets/60029146/08610d96-54e5-4425-85f9-c92e14f87a14)
+4. **Build and Run the App**
+- Open the project in Android Studio
+- Build the app and run it on an Android device or emulator
 
+## Usage
 
+- **Upload Image**: Select an image from your device to detect and count people
+- **Live Camera**: Use the real-time camera feed for continuous people detection and counting
 
+## Screenshots
 
-## Credits
+![Image Detection](app.jpg)
 
-This project includes the andrroid app code from the following repository:
+## Contributing
 
-- [Original Repository Name](https://github.com/surendramaran/YOLOv8-TfLite-Object-Detector)
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Special thanks to [link-to-original-author-profile](https://github.com/surendramaran) for their contribution.
-# Person_Counting_App
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or issues, please open an issue on the GitHub repository.
